@@ -9,4 +9,4 @@ while i <= 10:
     if (i == 10):
         print ("Ritenta, hai perso!")
 
-input = ("press any key to exit")
+input("press any key to exit")
