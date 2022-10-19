@@ -1,16 +1,12 @@
+b = ""
 i = 1
-totale = 0
 numeri = 10
 while i <= 10:
-    numero = int(input(str(numeri) + ", da inserire ancora "))
+    numero = (input(str(numeri) + " numeri da inserire ancora "))
+    b = (numero + b)
     numeri = numeri - 1
-    i = i + 1
-    totale = (str(totale) + str(numero))
-    
-    break  
-    
-    
-    print(totale)
-
+    i = i + 1   
+if(i == 10):
+    print (b)
 
 input("press any key to exit")
