@@ -1,12 +1,13 @@
-b = ""
+output = ""
+numero = input("inserisci un numero")
 i = 1
-numeri = 10
-while i <= 10:
-    numero = (input(str(numeri) + " numeri da inserire ancora "))
-    b = (numero + b)
-    numeri = numeri - 1
-    i = i + 1   
-if(i == 10):
-    print (b)
+while True:
+    if(numero != 0):
+        output = numero + output
+        i = i + 1
+    else:
+        break    
+    a = numero / i
+    print(i)
 
-input("press any key to exit")
+    input("press any key to exit")
