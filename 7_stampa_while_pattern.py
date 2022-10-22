@@ -6,4 +6,3 @@ while counter <= 6:
     counter = counter + 1 
 
 input("press any key to exit")
-
