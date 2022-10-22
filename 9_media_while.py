@@ -7,9 +7,8 @@ while True:
     else:
         if(numero >= max):
          max = numero
-        else:
-            if(numero <= min):
-             min = numero
+        if(numero <= min):
+         min = numero
 
 print("il numero maggiore è: " + str(max))
 print("il numero minore è: " + str(min))

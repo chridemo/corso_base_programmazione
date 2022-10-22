@@ -8,3 +8,5 @@ while True:
         output = a + output
     i = i + 1
 print(output)
+
+input("press any key to exit")
