@@ -1,13 +1,17 @@
-output = ""
-numero = input("inserisci un numero")
-i = 1
+max = 1 
+min = 1000000
 while True:
-    if(numero != 0):
-        output = numero + output
-        i = i + 1
+    numero = int(input("inserisci un numero, premi 0 per terminare: "))
+    if(numero == 0):
+        break
     else:
-        break    
-    a = numero / i
-    print(i)
+        if(numero >= max):
+         max = numero
+        else:
+            if(numero <= min):
+             min = numero
 
-    input("press any key to exit")
+print("il numero maggiore è: " + str(max))
+print("il numero minore è: " + str(min))
+
+input("press any key to exit")
