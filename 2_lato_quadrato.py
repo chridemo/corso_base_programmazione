@@ -6,6 +6,3 @@ A = domanda * domanda
 print("l'area è " + str(A))
 
 input("press any key to exit")
-
-
-
