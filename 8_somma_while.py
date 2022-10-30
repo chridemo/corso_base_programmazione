@@ -1,4 +1,4 @@
-i = 0 
+i = 1 
 output = 0 
 while True:
     a = int(input("inserisci un numero: "))

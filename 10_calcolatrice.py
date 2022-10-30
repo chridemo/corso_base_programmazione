@@ -8,8 +8,8 @@ if(operazione == 2):
 if(operazione == 3):
 	if(numero2 == 0):
        		print("Non puoi dividere per 0! ") 
-	else:
-   		print(numero1/nnumero2) 
+else:
+   	print(numero1/numero2) 
 if(operazione == 4):
     print(numero1 * numero2)
 
