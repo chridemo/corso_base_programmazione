@@ -6,12 +6,10 @@ if(operazione == 1):
 if(operazione == 2):
     print(numero1 - numero2)
 if(operazione == 3):
-    print(numero1 / numero2)
-else:
-    if(numero1 == 0):
-        print("Non puoi dividere per 0! ") 
-    if(numero2 == 0):
-        print("Non puoi dividere per 0! ")
+	if(numero2 == 0):
+       		print("Non puoi dividere per 0! ") 
+	else:
+   		print(numero1/nnumero2) 
 if(operazione == 4):
     print(numero1 * numero2)
 
