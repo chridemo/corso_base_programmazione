@@ -10,12 +10,22 @@ r = 0
 p = 0
 f = 0
 y0 = 0
-inserisci_legge = 0
-moto = 0
-i = 0
 while True:
-    print("mru, mrua, mcu, mp")
+    print("Benvenuto nel formulario di fisica!")
+    print("")
+    print("- mru inserire (1)")
+    print("- mrua inserire (2)")
+    print("- mcu inserire (3)")
+    print("- mcp inserire (4)")
+    print("- per uscire inserire (0)")
     moto = int(input("inserisci il moto: "))
+    
+    if(moto == 0):
+        break
+    
+    def l_o_funzione(x, y):
+        risultato: int = v * t
+    
     if (moto == 1):
         print("----------------------------------------------------")
         print("- legge oraria inserire (1,1)")    
@@ -25,10 +35,10 @@ while True:
         if(inserisci_legge == "3,1"):
             v = int(input("inserire la velocità: "))
             t = int(input("inserire il tempo: "))
-            legge_oraria_x_t = v * t 
+            risultato = l_o_funzione(v, t)
              
             print("")
-            print( "x = " + str(legge_oraria_x_t) + " m")
+            print( "x = " + str(risultato) + " m")
             print("")
             
 
@@ -37,7 +47,6 @@ while True:
             t = int(input("inserire il tempo: "))
             x0 = int(input("inserire la posizione iniziale: "))
             legge_oraria_t = v * t + x0
-            i = i + 1
             print("")
             print("x = " + str(legge_oraria_t) + " m")
             print("")
@@ -48,7 +57,6 @@ while True:
             t0 = int(input("inserire il tempo iniziale: "))
             v = int(input("inserire la velocità: "))
             legge_oraria = v * (t - t0) + x0
-            i = i + 1
             print("")
             print("x = " + str(legge_oraria) + " m")
             print("")
@@ -67,7 +75,6 @@ while True:
             delta_v = int(input("inserire la variazione di velocità: "))
             delta_t = int(input("inserire l'intervallo di tempo: "))
             accellerazione_media = delta_v / delta_t
-            i = i + 1
             print("")
             print("am = " + str(accellerazione_media) + " m/s^2")
             print("")
@@ -78,7 +85,6 @@ while True:
             t = int(input("inserire l'intervallo tempo: "))
             a = int(input("inserire l'accellerazione: "))
             legge_oraria = x0 + v0 * t + a / 2 * (t * t)
-            i = i + 1
             print("")
             print("x = " + str(legge_oraria) + " m")
             print("")
@@ -88,7 +94,6 @@ while True:
             t = int(input("inserire l'intervallo tempo: "))
             a = int(input("inserire l'accellerazione: "))
             legge_oraria = x0 + a / 2 * (t * t)
-            i = i + 1
             print("")
             print("x = " + str(legge_oraria) + " m")
             print("")
@@ -97,7 +102,6 @@ while True:
             t = int(input("inserire l'intervallo tempo: "))
             a = int(input("inserire l'accellerazione: "))
             legge_oraria = (a / 2) * t * t
-            i = i + 1
             print("")
             print("x = " + str(legge_oraria) + " m")
             print("")
@@ -106,19 +110,17 @@ while True:
             v0 = int(input("inserire la velocità iniziale: "))
             a = int(input("inserire l'accellerazione: "))
             t = int(input("inserire l'intervallo tempo: "))
-            t0 = int(input("inserire il tempo iniziale"))
+            t0 = int(input("inserire il tempo iniziale: "))
             legge_velocità = v0 + a * (t - t0)
-            i = i + 1
             print("")
             print("x = " + str(legge_velocità) + " m/s")
             print("")
         
         if(inserisci_legge == "3,2"):  
-            v0 = int(input("inserire il tempo iniziale"))
+            v0 = int(input("inserire il tempo iniziale: "))
             a = int(input("inserire l'accellerazione: "))
             t = int(input("inserire l'intervallo tempo: "))
             legge_velocità = v0 + a * t
-            i = i + 1
             print("")
             print("x = " + str(legge_velocità) + " m/s")
             print("")
@@ -127,7 +129,6 @@ while True:
             a = int(input("inserire l'accellerazione: "))
             t = int(input(("inserire l'intervallo di tempo: ")))
             legge_velocità = a * t
-            i = i + 1
             print("")
             print("x = " + str(legge_velocità) + " m/s")
             print("")
@@ -144,7 +145,6 @@ while True:
             v = int(input("inserire la velocità: "))
             r = int(input("inserire il raggio: "))
             accellerazione_centripeta = (v * v) / r
-            i = i + 1
             print("")
             print("ac = " + str(accellerazione_centripeta) + " m/s^2")
             print("")
@@ -152,33 +152,29 @@ while True:
         if(inserisci_legge == "2,3"):
             p = int(input("inserire il periodo: "))
             frequenza = 1 / p
-            i = i + 1
             print("")
             print("f = " + str(frequenza) + " Hz")
             print("")
         
         if(inserisci_legge == "3,3"):
-            f = input("inserici la frequenza: ")
+            f = input("inserire la frequenza: ")
             periodo = 1 / f
-            i = i + 1
             print("")
             print("p = " + str(periodo) + " s")
             print("")
         
         if(inserisci_legge == "4,3"):
-            r = int(input("inserici il raggio: "))
-            p = int(input("inserici il periodo: "))
+            r = int(input("inserire il raggio: "))
+            p = int(input("inserire il periodo: "))
             velocità_periodo = (6.28 * r) / p
-            i = i + 1
             print("")
             print("v = " + str(velocità_periodo) + " m/s")
             print("")
         
         if(inserisci_legge == "5,3"):
-            r = int(input("inserici il raggio: "))
-            f = int(input("inserici la frequenza: "))
+            r = int(input("inserire il raggio: "))
+            f = int(input("inserire la frequenza: "))
             velocità_frequenza = (6.28 * r) * f
-            i = i + 1
             print("")
             print("v = " + str(velocità_frequenza) + " m/s")
             print("")
@@ -199,7 +195,6 @@ while True:
             v0 = int(input("inserire la velocità iniziale: "))
             t = int(input("inserire l'intervallo di tempo: "))
             legge_oraria_x = x0 + v0 * t
-            i = i + 1
             print("")
             print("x = " + str(legge_oraria_x) + " m")
             print("")
@@ -208,7 +203,6 @@ while True:
             v0 = int(input("inserire la velocità iniziale: "))
             t = int(input("inserire l'intervallo di tempo: "))
             legge_oraria_x = v0 * t
-            i = i + 1
             print("")
             print("x = " + str(legge_oraria_x) + " m")
             print("")
@@ -219,7 +213,6 @@ while True:
             t = int(input("inserire l'intervallo di tempo: "))
             a = int(input("inserire l'accellerazione: "))
             legge_oraria_y = y0 + v0 * t + (a / 2)* (t * t)
-            i = i + 1
             print("")
             print("x = " + str(legge_oraria_y) + " m")
             print("")
@@ -229,7 +222,6 @@ while True:
             t = int(input("inserire l'intervallo di tempo: "))
             a = int(input("inserire l'accellerazione: "))
             legge_oraria_y = y0 + (a / 2)* (t * t)
-            i = i + 1
             print("")
             print("x = " + str(legge_oraria_y) + " m")
             print("")
@@ -238,7 +230,6 @@ while True:
             t = int(input("inserire l'intervallo di tempo: "))
             a = int(input("inserire l'accellerazione: "))
             legge_oraria_y =  (a / 2)* (t * t)
-            i = i + 1
             print("")
             print("x = " + str(legge_oraria_y) + " m")
             print("")
@@ -246,7 +237,6 @@ while True:
         if(inserisci_legge == "6,4"):
             v0 = int(input("inserire la velocità iniziale: "))
             legge_velocità_x = v0
-            i = i + 1
             print("")
             print("x = " + str(legge_velocità_x) + " m/s")
             print("")
@@ -256,7 +246,6 @@ while True:
             t = int(input("inserire l'intervallo di tempo: "))
             a = int(input("inserire l'accellerazione: "))
             legge_velocità_y = v0 + a * t
-            i = i + 1
             print("")
             print("x = " + str(legge_velocità_y) + " m/s")
             print("")
@@ -265,9 +254,8 @@ while True:
             t = int(input("inserire l'intervallo di tempo: "))
             a = int(input("inserire l'accellerazione: "))
             legge_velocità_y = a * t
-            i = i + 1
             print("")
             print("x = " + str(legge_velocità_y) + " m/s")
             print("")
-        
+            
 input = ("exit")
